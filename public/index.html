@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Caller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="center">
+        <h1>API Caller</h1>
+        
+        <div class="input-group inline">
+            <label for="apiUrl">API URL:</label>
+            <input type="text" id="apiUrl" placeholder="Enter API URL" style="width: 400px;">
+        </div>
+        
+        <div class="input-group inline">
+            <label for="requestMethod">Request Method:</label>
+            <select id="requestMethod">
+                <option value="GET">GET</option>
+                <option value="POST">POST</option>
+                <option value="PUT">PUT</option>
+                <option value="DELETE">DELETE</option>
+                <option value="PATCH">PATCH</option>
+            </select>
+        </div>
+        
+        <div class="input-group inline">
+            <label for="requestHeaders">Request Headers:</label>
+            <div id="requestHeaders" class="header-list">
+                <div class="header-input-group">
+                    <!--    -->
+                </div>
+            </div>
+            <button id="addHeader">+</button>
+        </div>
+        
+        <div class="input-group inline">
+            <label for="requestBody">Request Body:</label>
+            <textarea id="requestBody" placeholder="Enter request body" style="height: 100px; width: 300px;"></textarea>
+        </div>
+        
+        <div class="input-group inline">
+            <label for="showResponse">Show Response:</label>
+            <select id="showResponse">
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+            </select>
+        </div>
+        
+        <div class="input-group inline">
+            <label for="requestCount">Number of API Calls:</label>
+            <input type="number" id="requestCount" min="1">
+            <button id="callApiButton">Call API</button>
+
+        </div>
+        
+        <div class="result-box" id="result">
+            <p class="waiting">Result Box</p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Contact: link2anjan@gmail.com</p>
+        <p class="footer-text">This project is open source and free to use, created by Anjan Jana. © Aug 2023 - <span id="currentYear"></span>. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
